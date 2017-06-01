@@ -2,6 +2,14 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 
+![alt text][image1]
+![alt text][image2]
+![alt text][image3]
+
+[image1]: ./examples/white.gif "white"
+[image2]: ./examples/yellow.gif "yellow"
+[image3]: ./examples/extra.gif "extra"
+
 The goals / steps of this project are the following:
 
 * Make a pipeline that finds lane lines on the road
@@ -11,7 +19,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of 5 steps.
 
@@ -31,7 +39,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * last step is two cv.line calls which draw the line from top to the bottom.
 
 
-###2. Identify potential shortcomings with your current pipeline
+### 2. Identify potential shortcomings with your current pipeline
 
 
 One potential shortcoming would be what would happen when the camera moves or input image size changes:
@@ -45,7 +53,7 @@ Another shortcoming could be false edge / line within the ROI:
 One more thing is that in the current pipeline all the processing happens offline. And based on the average cpu time elapsed when processing the white / yellow / challenge video are 9.9ms, 10.1ms and 18.6ms respectively. The latency value may or may not be good enough for a real time application. Of course when processing real videos we can use some temporal info to reduce the computation. e.g only process the adjacent region of lane detected from the last frame.
 
 
-###3. Suggest possible improvements to your pipeline
+### 3. Suggest possible improvements to your pipeline
 
 Some possible improvement would be to:
 
